@@ -28,9 +28,8 @@ const AppProvider = ({ children }) => {
   const fetchQuestions = async (url) => {
     setLoading(false);
     setWaiting(false);
-    const response = await axios(url).catch((error) => {
-      console.log(error);
-    });
+    const response = await axios(url).catch((error) => console.log(error));
+
     if (response) {
       const data = response.data.results;
 

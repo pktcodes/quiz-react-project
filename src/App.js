@@ -15,6 +15,10 @@ function App() {
     return <Loading></Loading>;
   }
 
+  console.log(questions[0]);
+
+  const { correct_answer, incorrect_answers, question } = questions[0];
+
   return <main>quiz app</main>;
 }
 
