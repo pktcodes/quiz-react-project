@@ -11,9 +11,6 @@ const API_ENDPOINT = "https://opentdb.com/api.php?";
 
 const url = "";
 
-const tempUrl =
-  "https://opentdb.com/api.php?amount=10&category=21&difficulty=easy&type=multiple";
-
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
@@ -89,6 +86,10 @@ const AppProvider = ({ children }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    const { amount, category, difficulty } = quiz;
+
+    const url = `${API_ENDPOINT}amount=${amount}&difficulty=${difficulty}&category=${table[category]}&type=multiple`;
+    fetchQuestions(url);
   };
 
   return (
