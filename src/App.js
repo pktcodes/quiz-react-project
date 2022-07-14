@@ -24,7 +24,15 @@ function App() {
   }
 
   const { correct_answer, incorrect_answers, question } = questions[index];
-  const answers = [...incorrect_answers, correct_answer];
+  // const answers = [...incorrect_answers, correct_answer];
+  let answers = [...incorrect_answers];
+  const tempIndex = Math.floor(Math.random() * 4);
+  if (tempIndex === 3) {
+    answers.push(correct_answer);
+  } else {
+    answers.push(answers[tempIndex]);
+    answers[tempIndex] = correct_answer;
+  }
 
   return (
     <main>
