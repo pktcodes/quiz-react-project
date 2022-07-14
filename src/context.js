@@ -82,7 +82,9 @@ const AppProvider = ({ children }) => {
   };
 
   const handleChange = (event) => {
-    console.log(event);
+    const name = event.target.name;
+    const value = event.target.value;
+    setQuiz({ ...quiz, [name]: value });
   };
 
   const handleSubmit = (event) => {
