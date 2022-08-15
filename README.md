@@ -24,5 +24,5 @@ Netlify
 
 ---
 
-_Note: I have developed this project ~ [23] on part of React and Projects Course thought by John Smilga._
+_Note: I have developed this project ~ [23] as part of React and Projects Course taught by John Smilga._
 
